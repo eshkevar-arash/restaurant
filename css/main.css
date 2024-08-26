@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-rows:80vh repeat(5,max-content);
+    grid-template-columns: repeat(6,1fr);
+}
+.section-title{
+    text-align: center;
+    font-size: 27px;color: orange;padding: 25px;
+}
+.section-title::before,
+.section-title::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 5%;
+    height: 1px;
+    background-color: black;
+}
+.section-title::before{right: .5rem;margin-left: -50%}
+.section-title::after{left: .5rem;margin-right: -50%}
